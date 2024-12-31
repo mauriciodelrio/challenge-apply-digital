@@ -1,7 +1,16 @@
+import { CardItem } from "@/components"
+
 export default async function Home() {
   return (
-    <main className='flex min-h-screen flex-col items-center justify-between p-24 font-bold text-4xl text-blue-600'>
-      Hello, world!
+    <main className=''>
+      <section className='flex max-w["1280px"] gap-12 flex-row flex-wrap justify-center py-12 px-32'>
+        <CardItem genre="GAMES" image="asxasdcvd" productName="Cyberpunk 2077" price="24.29" />
+        <CardItem genre="GAMES" image="asxasdcvd" productName="Cyberpunk 2077" price="24.29" />
+        <CardItem genre="GAMES" image="asxasdcvd" productName="Cyberpunk 2077" price="24.29" />
+        <CardItem genre="GAMES" image="asxasdcvd" productName="Cyberpunk 2077" price="24.29" />
+        <CardItem genre="GAMES" image="asxasdcvd" productName="Cyberpunk 2077" price="24.29" />
+        <CardItem genre="GAMES" image="asxasdcvd" productName="Cyberpunk 2077" price="24.29" />
+      </section>
     </main>
   )
 }
