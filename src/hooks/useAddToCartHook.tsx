@@ -6,11 +6,12 @@ interface Props {
     name: string;
     price: number;
     isNew?: boolean;
+    description?: string;
 }
 
 export const useAddToCartHook = (props:Props) => {
     const [addedToCart, setAddedToCart] = useState(false);
-    const { genre, image, name, price, isNew } = props;
+    const { genre, image, name, price, isNew, description } = props;
     const manageLocalStorage = () => {
         const cart = localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')!) : [];
         const newItem = {
@@ -18,7 +19,8 @@ export const useAddToCartHook = (props:Props) => {
             image,
             name,
             price,
-            isNew
+            isNew,
+            description,
         }
         cart.push(newItem);
         localStorage.setItem('cart', JSON.stringify(cart));
@@ -28,8 +30,6 @@ export const useAddToCartHook = (props:Props) => {
                 setAddedToCart(false);
             }, 2000)
         }, 200)
-        console.log('Item added to cart:', newItem);
-        console.log('Cart:', localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')!) : []);
     }
 
     return {

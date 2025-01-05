@@ -6,6 +6,7 @@ interface Cart {
     name: string;
     price: number;
     isNew?: boolean;
+    description?: string;
 }
 
 interface CartDetails {

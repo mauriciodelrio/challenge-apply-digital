@@ -20,7 +20,7 @@ export const OrderSummary = ({cartDetails}:{cartDetails: CartDetails[]}) => {
                 {
                     cartDetails.map((item, index) => {
                         return (
-                            <div key={index} className="flex flex-row gap-4 justify-between">
+                            <div key={index} className="flex flex-row gap-4 justify-between  text-neutral-800">
                                 <div className="text-lg">{item.name}</div>
                                 <div className="text-lg">${item.price}</div>
                             </div>

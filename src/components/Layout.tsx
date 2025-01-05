@@ -1,4 +1,3 @@
-import { Inter } from "next/font/google";
 import { Footer, TopBar } from "@/components";
 
 export const Layout = ({

@@ -13,7 +13,7 @@ const Home = () => {
         <>
           {
             data?.map((game, index) => {
-              return <CardItem key={index} genre={game.genre} image={game.image} name={game.name} price={game.price} isNew={game.isNew} />
+              return <CardItem key={index} genre={game.genre} image={game.image} name={game.name} price={game.price} isNew={game.isNew} description={game.description} />
             })
           }
         </>

@@ -7,6 +7,7 @@ interface Props {
     name: string;
     price: number;
     isNew?: boolean;
+    description?: string;
 }
 
 export const CardItem = (props: Props) => {
