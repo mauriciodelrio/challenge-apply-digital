@@ -7,7 +7,7 @@ export default function Home() {
   const { genre, availableFilters, data, fetchPage, loading, totalPages, handleSetPage } = useLoadDataHook()
 
   return (
-    <main className='h-full'>
+    <div className='h-full'>
       <div className='flex max-w["1280px"] gap-12 flex-row flex-wrap justify-center py-12 px-32'>
         <HeaderFilters genre={genre} availableFilters={availableFilters} />
         <>
@@ -25,6 +25,6 @@ export default function Home() {
             fetchPage < totalPages && <button className='flex w-fit rounded-md px-6 py-2 gap-2 bg-cta-fill-primary text-white' onClick={handleSetPage}>SEE MORE</button>
           }
       </div>
-    </main>
+    </div>
   )
 }
