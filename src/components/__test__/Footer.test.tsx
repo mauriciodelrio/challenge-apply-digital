@@ -5,7 +5,7 @@ import '@testing-library/jest-dom';
 
 describe('Footer component', () => {
     it('should render without crashing', () => {
-        const { getByText } = render(<Footer />);
-        expect(getByText('© 2021 GamerShop')).toBeInTheDocument();
+        const { getByAltText } = render(<Footer />);
+        expect(getByAltText('logo')).toBeInTheDocument();
     });
 });

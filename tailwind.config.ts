@@ -17,7 +17,10 @@ const config: Config = {
         "Surface-Secondary": "#EEEEEE",
         "cta-stroke-primary": "#3B3B3B",
         "cta-stroke-secondary": "#3B3B3B",
-        "item-fill": "#3B3B3B"
+        "cta-fill-primary": "#585660",
+        "item-fill": "#3B3B3B",
+        "stroke-tertiary": "#EFEDF3",
+        "gray-medium": "#3B3B3B",
       },
       width: {
         "card": "23.75rem",
