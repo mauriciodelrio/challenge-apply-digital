@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
 import { useRouter } from 'next/navigation'
-interface SelectHookProps {
+interface Props {
     value: string,
     page: number,
 }
 
-export const useSelectHook = ({ value, page }: SelectHookProps) => {
+export const useSelectHook = ({ value, page }: Props) => {
     const [val, setVal] = useState(value)
     const router = useRouter()
     const onChange = (e: React.ChangeEvent<HTMLSelectElement>) => {

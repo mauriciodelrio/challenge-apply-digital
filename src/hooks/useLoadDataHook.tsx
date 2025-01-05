@@ -23,7 +23,7 @@ export const useLoadDataHook = () => {
         method: 'GET',
         params: {
             genre: genre,
-            page: changeGender ? 1 : fetchPage
+            page: changeGender ? '1' : fetchPage.toString()
         }
         }).then(res => {
         router.push(`?${ genre && `genre=${genre}&`}page=${changeGender ? 1 : fetchPage}`, {

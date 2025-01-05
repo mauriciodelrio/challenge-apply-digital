@@ -1,5 +1,6 @@
 import { useState } from 'react'
 
+// I recommend to use props interface in the hook
 interface Props {
     genre: string;
     image: string;

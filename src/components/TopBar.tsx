@@ -7,7 +7,7 @@ export const TopBar = () => {
         <div>GamerShop</div>
         <div>
           <Link href='/cart'>
-            <ShoppingCartIcon className='size-6 text-gray-800 cursor-pointer'/>
+            <ShoppingCartIcon  data-testid='cart-icon' className='size-6 text-gray-800 cursor-pointer'/>
           </Link>
         </div>
     </div>

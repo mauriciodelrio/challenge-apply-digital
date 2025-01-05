@@ -2,12 +2,12 @@
 import { useSelectHook } from '../hooks/useSelectHook'
 import { availableFilters } from '../utils/endpoint';
 
-interface HeaderFiltersProps {
+interface Props {
     genre: string;
     availableFilters: string[];
 }
 
-export const HeaderFilters = ({ genre }: HeaderFiltersProps) => {
+export const HeaderFilters = ({ genre }: Props) => {
     let { val, onChange } = useSelectHook({ value: genre ?? '', page: 1 })
     return (
         <div className='px-32 py-12 border-b border-stroke-tertiary flex flex-col gap-12 w-full'>

@@ -1,19 +1,5 @@
 import { useState, useEffect } from 'react'
-
-interface Cart {
-    genre: string;
-    image: string;
-    name: string;
-    price: number;
-    isNew?: boolean;
-    description?: string;
-}
-
-interface CartDetails {
-    name: string;
-    price: number;
-}
-
+import { Cart, CartDetails } from '@/interfaces'
 
 export const useCartLogicHook = () => {
 

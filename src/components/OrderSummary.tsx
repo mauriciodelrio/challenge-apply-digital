@@ -1,9 +1,5 @@
 import React from 'react'
-
-interface CartDetails {
-    name: string;
-    price: number;
-}
+import { CartDetails } from '@/interfaces'
 
 export const OrderSummary = ({cartDetails}:{cartDetails: CartDetails[]}) => {
 

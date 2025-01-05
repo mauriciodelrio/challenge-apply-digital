@@ -27,7 +27,7 @@ export const CartItem = (props:Props) => {
                     <div className="text-lg font-bold text-end absolute bottom-0 right-0">${price}</div>
                 </div>
                 <div className={`absolute right-0 top-0 w-6 h-6 flex justify-center items-center`}>
-                    <XMarkIcon className="size-6 cursor-pointer text-neutral-500" onClick={onDelete} />
+                    <XMarkIcon data-testid="delete-icon" className="size-6 cursor-pointer text-neutral-500" onClick={onDelete} />
                 </div>
             </div>
             <div className="w-full flex flex-col gap-2 border-b-2"></div>
