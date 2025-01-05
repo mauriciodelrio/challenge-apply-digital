@@ -2,7 +2,7 @@ import { ArrowPathIcon } from '@heroicons/react/24/outline'
 import { CardItem, HeaderFilters } from "@/components"
 import { useLoadDataHook } from "@/hooks"
 
-export default function Home() {
+const Home = () => {
   
   const { genre, availableFilters, data, fetchPage, loading, totalPages, handleSetPage } = useLoadDataHook()
 
@@ -28,3 +28,5 @@ export default function Home() {
     </div>
   )
 }
+
+export default Home

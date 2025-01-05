@@ -1,6 +1,6 @@
 import Image from 'next/image'
-import React from 'react'
-
+import { useState } from 'react'
+import { useAddToCartHook } from '@/hooks';
 interface Props {
     genre: string;
     image: string;
@@ -12,6 +12,7 @@ interface Props {
 export const CardItem = (props: Props) => {
 
     const { genre, image, name, price, isNew } = props;
+    const { manageLocalStorage, addedToCart } = useAddToCartHook(props);
 
     return (
         <div className='relative flex flex-col p-6 gap-2 bg-white rounded-lg border border-0.5 w-card h-card'>
@@ -29,7 +30,11 @@ export const CardItem = (props: Props) => {
                 <div className='text-lg font-bold text-item-fill'>$ { price } </div>
             </div>
             <div className='flex justify-between items-center'>
-                <button className='px-6 py-4 rounded-lg w-full h-14 border rounded-lg border-cta-stroke-primary text-cta-stroke-secondary font-bold'>ADD TO CART</button>
+                <button className={`px-6 py-4 rounded-lg w-full h-14 border rounded-lg border-cta-stroke-primary text-cta-stroke-secondary font-bold ${addedToCart && 'text-white bg-green-800'}`} onClick={manageLocalStorage}>
+                    {
+                        addedToCart ? 'Added to cart' : 'Add to cart'
+                    }
+                    </button>
             </div>
         </div>
     )
