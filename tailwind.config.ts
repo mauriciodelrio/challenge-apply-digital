@@ -24,10 +24,12 @@ const config: Config = {
       },
       width: {
         "card": "23.75rem",
+        "m-card":"20.4rem", 
         "thumbnail": "20.75rem"
       },
       height: {
         "card": "27.25rem",
+        "m-card": "27.25rem",
         "thumbnail": "15rem"
       },
     },

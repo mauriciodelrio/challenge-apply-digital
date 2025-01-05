@@ -11,13 +11,13 @@ interface Props {
     description?: string;
 }
 
-export const CartItem = (props:Props) => {
+export const CartItem = (props: Props) => {
 
     const { genre, image, name, price, onDelete, description } = props;
     return (
         <>
-            <div className="w-full flex flex-row gap-4 relative my-2">
-                <div className="w-1/3">
+            <div className="w-full flex md:flex-row flex-col gap-4 relative my-2">
+                <div className="flex md:w-1/3 w-full justify-center">
                     <Image src={image} width={200} height={200} alt="game" />
                 </div>
                 <div className="w-2/3 flex flex-col gap-2">

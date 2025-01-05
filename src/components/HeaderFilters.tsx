@@ -1,6 +1,6 @@
 'use client'
-import { useSelectHook } from '../hooks/useSelectHook'
-import { availableFilters } from '../utils/endpoint';
+import { useSelectHook } from '@/hooks'
+import { availableFilters } from '@/utils/endpoint';
 
 interface Props {
     genre: string;
@@ -10,7 +10,7 @@ interface Props {
 export const HeaderFilters = ({ genre }: Props) => {
     let { val, onChange } = useSelectHook({ value: genre ?? '', page: 1 })
     return (
-        <div className='px-32 py-12 border-b border-stroke-tertiary flex flex-col gap-12 w-full'>
+        <div className='px-8 py-4 md:px-32 md:py-12 border-b border-stroke-tertiary flex flex-col gap-12 w-full'>
             <div className='text-2xl font-bold text-gray-medium'>Top Sellers</div>
             <div className='flex justify-end items-end gap-12'>
                 <div className='text-xs font-bold text-primary'>Genre</div>

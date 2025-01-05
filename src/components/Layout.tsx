@@ -1,4 +1,5 @@
 import { Footer, TopBar } from "@/components";
+import Head from "next/head";
 
 export const Layout = ({
   children,
@@ -7,6 +8,10 @@ export const Layout = ({
 }>) => {
   return (
     <>
+      <Head>
+        <meta property="og:title" content="Apply Digital Test"/>
+        <meta property="og:description" content="Frontend development test for Apply Digital"/>
+      </Head>
       <TopBar />
       {children}
       <Footer />

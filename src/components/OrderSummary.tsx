@@ -5,7 +5,7 @@ export const OrderSummary = ({cartDetails}:{cartDetails: CartDetails[]}) => {
 
   return (
     <>
-        <div className='flex flex-col p-8 border-2 border-gray-200 rounded-lg gap-4'>
+        <div className='flex flex-col md:p-8 border-2 border-gray-200 rounded-lg gap-4 p-2'>
             <div className="text-xl font-bold">Order Summary</div>
             {
                 cartDetails.length > 0 && (
